@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>AYYAPPA</title>
     <link rel="stylesheet" href="components/bootstrap/dist/css/bootstrap.css">
-    
+    <base href="/">
 
 
 </head>
@@ -56,13 +56,14 @@
 
     <div ng-controller="myController">
         Rows to Display:<input type="number" step="1" min="0" max="4" ng-model="rowLimit"/>
-        <br>
+        <br></br>
         OrderBy:    <select ng-model="sortColumn">
                         <option value="name">Name asc</option>
                         
                     </select>
-        <br>            
-        <table>
+        <br>
+        </br>            
+        <table border = "2px">
             <thead>
                 <tr>
                     <th>NAME</th>
@@ -85,11 +86,6 @@
         </table>
     </div>
     <br><br>
-
-    
-
-
-
 
 
 <script type="text/javascript" src="components/jquery/dist/jquery.min.js"></script>

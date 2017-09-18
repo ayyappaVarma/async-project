@@ -36,5 +36,3 @@ function(err, results) {
     }
    
 });
-}
-module.exports=getSeries;
