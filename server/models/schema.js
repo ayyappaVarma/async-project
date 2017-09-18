@@ -1,5 +1,6 @@
 var mongoose=require("mongoose");
-mongoose.connect('mongodb://localhost/test');
+var config = require('./../config/config.js');
+mongoose.connect(config.mongo.url);
 var schema = mongoose.Schema;
 
 var studentSchema= new schema({

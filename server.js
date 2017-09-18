@@ -6,11 +6,12 @@ var bodyParser = require('body-parser');
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({
-	extended: true
+	extended: false
+
 }));
-
-
-
+var config = require('./server/config/config.js');
+app.use(express.static('client', {index: 'views/index.html'}));
+var router=require('./server/routes/async-router.js');
 app.use('/api',router); 
 
-app.listen(4040);
+app.listen(config.port);
